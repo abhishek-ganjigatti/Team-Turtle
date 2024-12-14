@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Hotspot Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Hotspot Analysis</h2>
+            <div class="controls">
+                <select id="placeType">
+                    <option value="school">Schools</option>
+                    <option value="restaurant">Restaurants</option>
+                    <option value="hospital">Hospitals</option>
+                    <option value="park">Parks</option>
+                </select>
+                <input type="number" id="radius" value="2000" min="500" max="5000" step="500">
+                <button id="searchButton">Search Places</button>
+            </div>
+            <div id="placesList"></div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6cabFRuL0Q1w3iDh9q0_HjEAqF3hUsUU&libraries=places,visualization&callback=initMap">
+    </script>
+</body>
+</html>
